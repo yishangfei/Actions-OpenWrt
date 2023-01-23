@@ -12,7 +12,7 @@ utc_name='Asia\/Shanghai'
 sed -i "s/'UTC'/'CST-8'\n   set system.@system[-1].zonename='$utc_name'/g" package/base-files/files/bin/config_generate
 
 echo "修改机器名称"
-device_name='yishangfei'
+device_name='OpenWrt'
 sed -i "s/OpenWrt/$device_name/g" ./package/base-files/files/bin/config_generate
 
 echo "修改wifi名称"
