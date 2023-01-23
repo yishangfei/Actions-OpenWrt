@@ -19,6 +19,5 @@ echo "修改wifi名称"
 wifi_name=ysf
 sed -i "s/OpenWrt/$wifi_name/g" ./package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
-# echo "修改wifi默认开启"
-# wifi_disabled=0
-# sed -i "s/1/$lan_ip/g" ./package/kernel/mac80211/files/lib/wifi/mac80211.sh
+# echo "wifi默认开启"
+sed -i '/set wireless.${name}.disabled/d' ./package/kernel/mac80211/files/lib/wifi/mac80211.sh
