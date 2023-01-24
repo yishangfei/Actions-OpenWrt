@@ -4,13 +4,14 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/yishangfei/Actions-OpenWrt?style=for-the-badge&label=固件下载)](https://github.com/yishangfei/Actions-OpenWrt/releases/latest)
 
 #### 固件源码来源
-- padavanonly-[padavanonly/immortalwrtARM](https://github.com/padavanonly/immortalwrtARM/tree/mt7986).
-```bash
-git clone -b mt7986 --single-branch https://github.com/padavanonly/immortalwrtARM
-```
 - openwrt-[openwrt/openwrt](https://github.com/openwrt/openwrt).
 ```bash
 git clone -b master --single-branch https://github.com/openwrt/openwrt
+```
+
+- hanwckf-[hanwckf/immortalwrt-mt798x](https://github.com/hanwckf/immortalwrt-mt798x).
+```bash
+git clone -b openwrt-21.02 --single-branch https://github.com/hanwckf/immortalwrt-mt798x
 ```
 
 ## Redmi AX6000 不死uboot
