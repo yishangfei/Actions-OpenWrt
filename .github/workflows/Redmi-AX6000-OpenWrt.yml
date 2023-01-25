@@ -150,5 +150,5 @@ jobs:
       with:
         files: ${{ env.FIRMWARE }}/*
         name: ${{ env.FILE_DATE }}-${{ env.OPENWRT_NAME }}-${{ env.DEVICE_NAME }}
-        tag_name: ${{ env.RELEASE_TAG }}
+        tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
