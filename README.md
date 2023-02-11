@@ -28,7 +28,7 @@ git clone -b openwrt-21.02 --single-branch https://github.com/hanwckf/immortalwr
 
 ### 固件初始配置
 - 默认管理IP:`192.168.1.1` 
-- 用户名:`root`、
+- 用户名:`root`
 - 密码:`设置首次登录后台密码为空（进入openwrt后自行修改密码）`
 
 ### OpenClash内核配置
