@@ -22,6 +22,10 @@ sed -i "s/OpenWrt/$wifi_name/g" ./package/kernel/mac80211/files/lib/wifi/mac8021
 echo "wifi默认开启"
 sed -i '/set wireless.${name}.disabled/d' ./package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
+# Disable IPV6 ula prefix
+echo "关闭IPV6"
+sed -i 's/^[^#].*option ula/#&/' /etc/config/network
+
 # ##-----------------Add OpenClash dev core------------------
 # mkdir -p files/etc/openclash/core
 
