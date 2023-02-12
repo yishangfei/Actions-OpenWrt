@@ -23,10 +23,15 @@ echo "wifi默认开启"
 sed -i '/set wireless.${name}.disabled/d' ./package/kernel/mac80211/files/lib/wifi/mac80211.sh
 
 # ##-----------------Add OpenClash dev core------------------
-# curl -sL -m 30 --retry 2 https://raw.githubusercontent.com/vernesong/OpenClash/master/core-lateset/dev/clash-linux-arm64.tar.gz -o /tmp/clash.tar.gz
-# tar zxvf /tmp/clash.tar.gz -C /tmp >/dev/null 2>&1
-# chmod +x /tmp/clash >/dev/null 2>&1
-# mkdir -p feeds/luci/applications/luci-app-openclash/root/etc/openclash/core
-# mv /tmp/clash feeds/luci/applications/luci-app-openclash/root/etc/openclash/core/clash >/dev/null 2>&1
-# rm -rf /tmp/clash.tar.gz >/dev/null 2>&1
+# mkdir -p files/etc/openclash/core
+
+# CLASH_DEV_URL="https://raw.githubusercontent.com/vernesong/OpenClash/master/core-lateset/dev/clash-linux-arm64.tar.gz"
+# GEOIP_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
+# GEOSITE_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
+
+# wget -qO- $CLASH_DEV_URL | tar xOvz > files/etc/openclash/core/clash
+# wget -qO- $GEOIP_URL > files/etc/openclash/GeoIP.dat
+# wget -qO- $GEOSITE_URL > files/etc/openclash/GeoSite.dat
+
+# chmod +x files/etc/openclash/core/clash*
 # ##---------------------------------------------------------
