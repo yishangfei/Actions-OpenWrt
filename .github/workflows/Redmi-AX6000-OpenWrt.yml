@@ -18,7 +18,7 @@ on:
         required: false
         default: 'false'
   schedule:
-    - cron: "0 0 ? * MON"
+    - cron: "0 0 ? * FRI"
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt
